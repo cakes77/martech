@@ -4,4 +4,159 @@ body {
   margin:0px;
   font-family: 'Montserrat', 'Open Sans', 'Raleway', sans-serif;
 }
+
+.svg-item {
+  width: 50%;
+  font-size: 16px;
+  margin: 0;
+  animation: donutfade 1s;
+}
+svg.donut {
+  height:auto;
+}
+@keyframes donutfade {
+/* this applies to the whole svg item wrapper */
+  0% {
+      opacity: .2;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .svg-item {
+      width: 80%;
+  }
+}
+
+.donut-ring {
+  stroke: #EBEBEB;
+}
+
+.donut-segment {
+  transform-origin: center;
+  stroke: #FF6200;
+}
+
+.donut-segment-2 {
+  stroke: #00BCD4;
+  animation: donut1 3s;
+}
+
+
+.segment-1{fill:#ccc;}
+.segment-2{fill:#00BCD4;}
+
+
+.donut-percent {
+  animation: donutfadelong 1s;
+}
+
+@keyframes donutfadelong {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes donut1 {
+  0% {
+      stroke-dasharray: 0, 100;
+  }
+  100% {
+      stroke-dasharray: <?php echo $healthcareVar; ?>, <?php echo $otherVar; ?>;
+  }
+}
+
+.donut-text {
+fill: #FF6200;
+}
+.donut-text-1 {
+  fill: #00BCD4;
+}
+.donut-label {
+  font-size: 0.28em;
+  font-weight: 700;
+  line-height: 1;
+  fill: #000;
+  transform: translateY(0.25em);
+}
+
+.donut-percent {
+  font-size: 0.5em;
+  line-height: 1;
+  transform: translateY(0.5em);
+  font-weight: bold;
+}
+
+.donut-data {
+  font-size: 0.16em;
+  line-height: 1;
+  transform: translateY(0.5em);
+  text-align: center;
+  text-anchor: middle;
+  color:#666;
+  fill: #666;
+  animation: donutfadelong 1s;
+}
+.svg-item {
+  max-width:100%;
+    margin:0;
+  display:block;
+text-align:center;
+}
+#scale {
+padding-bottom: 30px;
+position: absolute;
+left: 0;
+right: 0;
+bottom: -30px;
+}
+
+#scale p {
+position: absolute;
+bottom: 0;
+left: -0.30%;
+}
+
+
+.bar {
+float: left;
+height: 15px;
+position: relative;
+width: 100%;
+z-index: 1;
+margin-bottom:5px;
+background-color:#adf6ff;
+}
+
+.bar .inner {
+background-color: #00BCD4;
+position: absolute;
+bottom: 0;
+left: 0;
+top: 0;
+}
+
+@-keyframes grow<?php echo $serviceVal; ?> {
+from { right: 100%; }
+to   { right: <?php echo $serviceVal; ?>%; }
+}  /*Growing*/
+
+@-webkit-keyframes grow<?php echo $serviceVal; ?> {
+from { right: 100%; }
+to   { right: <?php echo $serviceVal; ?>%; }
+} /*Growing*/
+
+.bar.pct<?php echo $serviceVal; ?> .inner {  
+-webkit-animation-duration: 1s;
+-webkit-animation-name: grow<?php echo $serviceVal; ?>;
+right: <?php echo $serviceVal; ?>%;
+} /*final*/
+div.tce-psdmc-se-nc-stats i {
+    color: #ffdb14;
+}
 </style>
