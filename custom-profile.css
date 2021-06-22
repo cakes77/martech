@@ -62,15 +62,6 @@ svg.donut {
   }
 }
 
-@keyframes donut1 {
-  0% {
-      stroke-dasharray: 0, 100;
-  }
-  100% {
-      stroke-dasharray: <?php echo $healthcareVar; ?>, <?php echo $otherVar; ?>;
-  }
-}
-
 .donut-text {
 fill: #FF6200;
 }
@@ -141,22 +132,4 @@ left: 0;
 top: 0;
 }
 
-@-keyframes grow<?php echo $serviceVal; ?> {
-from { right: 100%; }
-to   { right: <?php echo $serviceVal; ?>%; }
-}  /*Growing*/
-
-@-webkit-keyframes grow<?php echo $serviceVal; ?> {
-from { right: 100%; }
-to   { right: <?php echo $serviceVal; ?>%; }
-} /*Growing*/
-
-.bar.pct<?php echo $serviceVal; ?> .inner {  
--webkit-animation-duration: 1s;
--webkit-animation-name: grow<?php echo $serviceVal; ?>;
-right: <?php echo $serviceVal; ?>%;
-} /*final*/
-div.tce-psdmc-se-nc-stats i {
-    color: #ffdb14;
-}
 </style>
